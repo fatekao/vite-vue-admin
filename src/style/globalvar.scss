@@ -1,0 +1,15 @@
+$primaryColor: #435557;
+
+@forward 'element-plus/theme-chalk/src/common/var.scss' with (
+  $colors: (
+    'primary': (
+      'base': $primaryColor
+    )
+  ),
+  $input: (
+    'border-radius': 0
+  ),
+  $border-radius: (
+    'base': 0
+  ),
+);
