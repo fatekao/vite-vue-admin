@@ -2,9 +2,18 @@
   <el-date-picker v-model="date" type="date" placeholder="选择日期时间"> </el-date-picker>
   <el-button type="primary" size="default" @click="showMessage">显示选中时间</el-button>
   <el-button type="primary" size="default" @click="showMessageBox">显示当前时间</el-button>
+  <div>{{ appStore.isCollapse }}</div>
+  <el-button type="primary" size="default" @click="toggleCollapse">切换全局</el-button>
 </template>
 
 <script setup>
+import { useAppStore } from '@/pinia'
+
+const appStore = useAppStore()
+const toggleCollapse = () => {
+  appStore.toggleCollapse()
+}
+
 const date = ref('')
 
 const showMessage = () => {
