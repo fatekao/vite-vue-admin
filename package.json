@@ -10,8 +10,11 @@
   },
   "dependencies": {
     "element-plus": "^2.8.1",
+    "nprogress": "^0.2.0",
     "pinia": "^2.2.2",
-    "vue": "^3.4.37"
+    "reset.css": "^2.0.2",
+    "vue": "^3.4.37",
+    "vue-router": "^4.4.3"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.1.2",

@@ -1,4 +1,8 @@
 $primaryColor: #435557;
+$gAppHeaderHeight: 50px;
+$gAppSiderWidth: 200px;
+$gAppSiderWidthCollapse: 64px;
+$gAppTagHeight: 32px;
 
 @forward 'element-plus/theme-chalk/src/common/var.scss' with (
   $colors: (
