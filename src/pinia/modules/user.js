@@ -1,4 +1,5 @@
 import { getToken, setToken, getUserInfo as getUserInfoStore, setUserInfo } from '@/utils/webStorage'
+import { login, logout } from '@/api/user'
 import { isLocal } from '@/utils/helper'
 import { innerRoutes } from '@/router/router.config'
 import router from '@/router'
@@ -17,6 +18,19 @@ const useUserStore = defineStore('user', {
     }
   },
   actions: {
+    login(data) {
+      return new Promise((resolve, reject) => {
+        login(data)
+          .then(res => {
+            this.token = res.data
+            setToken(this.token)
+            resolve(res)
+          })
+          .catch(error => {
+            reject(error)
+          })
+      })
+    },
     getUserInfo() {
       return new Promise((resolve, reject) => {
         if (isLocal) {
@@ -39,6 +53,25 @@ const useUserStore = defineStore('user', {
           console.log('api: getUserInfo')
         }
       })
+    },
+    logout() {
+      return new Promise((resolve, reject) => {
+        logout()
+          .then(res => {
+            resolve(res)
+          })
+          .catch(res => {
+            reject(res)
+          })
+          .finally(() => {
+            this.fedlogout()
+          })
+      })
+    },
+    fedlogout() {
+      clearStore()
+      router.push('/login')
+      window.location.reload()
     }
   }
 })

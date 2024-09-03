@@ -9,14 +9,17 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "axios": "^1.7.7",
     "element-plus": "^2.8.1",
     "nprogress": "^0.2.0",
     "pinia": "^2.2.2",
+    "qs": "^6.13.0",
     "reset.css": "^2.0.2",
     "vue": "^3.4.37",
     "vue-router": "^4.4.3"
   },
   "devDependencies": {
+    "@faker-js/faker": "^8.4.1",
     "@vitejs/plugin-vue": "^5.1.2",
     "@vitejs/plugin-vue-jsx": "^4.0.1",
     "eslint": "^8.57.0",
@@ -32,6 +35,7 @@
     "unplugin-auto-import": "^0.18.2",
     "unplugin-vue-components": "^0.27.4",
     "vite": "^5.4.1",
+    "vite-plugin-fake-server": "^2.1.2",
     "vite-plugin-vue-setup-extend": "^0.4.0"
   }
 }
