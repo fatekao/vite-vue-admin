@@ -3,14 +3,14 @@
     <el-form-item prop="userName">
       <el-input v-model="login.form.userName" placeholder="admin">
         <template #prefix>
-          <ft-icon name="el-icon-User" size="20px"></ft-icon>
+          <ft-icon name="el-icon User" size="20px"></ft-icon>
         </template>
       </el-input>
     </el-form-item>
     <el-form-item prop="password">
       <el-input v-model="login.form.password" placeholder="123456" show-password>
         <template #prefix>
-          <ft-icon name="el-icon-Unlock" size="20px"></ft-icon>
+          <ft-icon name="el-icon Unlock" size="20px"></ft-icon>
         </template>
       </el-input>
     </el-form-item>

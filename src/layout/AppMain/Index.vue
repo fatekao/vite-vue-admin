@@ -2,11 +2,18 @@
   <section class="g-app-main">
     <router-view v-slot="{ Component, route }">
       <transition name="fade-transform" mode="out-in">
-        <component :is="Component" :key="route.fullPath" />
+        <keep-alive :include="tagStore.caches">
+          <component :is="Component" :key="route.fullPath" />
+        </keep-alive>
       </transition>
     </router-view>
   </section>
 </template>
+
+<script setup>
+import { useTagStore } from '@/pinia'
+const tagStore = useTagStore()
+</script>
 
 <style lang="scss" scoped>
 .g-app-main {

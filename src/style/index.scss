@@ -1,3 +1,4 @@
+@use '@/assets/font/iconfont.css' as *;
 @use 'reset.css' as *;
 
 // 滚动条样式
@@ -20,4 +21,8 @@
   background: rgba(144, 147, 153, 0.3);
   border-radius: 3px;
   cursor: pointer;
+}
+
+:focus-visible {
+  outline: none;
 }

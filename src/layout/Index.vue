@@ -22,6 +22,7 @@ import AppMain from './AppMain/Index.vue'
 .g-app-layout {
   width: 100vw;
   height: 100vh;
+  background-color: var(--el-bg-color-page);
   display: flex;
   flex-direction: column;
   overflow: hidden;
